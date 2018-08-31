@@ -1,0 +1,89 @@
+
+.touristPlace-part1{
+    width: 98%;
+    height: 60vh;
+    border-radius: 5px;
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url("../img/beach-dawn-depth-of-field-1139541.jpg");
+    background-size: cover;
+    background-position: center center;
+
+
+}
+
+
+
+.search-touristPlace{
+    width: 50rem;
+    height: 30rem;
+    
+    margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: rgba(253, 254, 254,.3);
+    border-radius: 5px;
+}
+.search-touristPlace-input{
+    width: 70%;
+    height: 4rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+}
+.searchPlace_submit{
+    height: 4rem;
+    margin-left: -3rem;
+    color: rgb(44, 62, 80);
+    font-size: 2rem;
+    background: #FFFFFF;
+    border: none;
+    font-family: 'Bree Serif', serif;
+    outline: none;
+
+}
+
+
+.touristPlace-image{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+}
+.separateTouristPlaceBlock{
+    background: rgb(248, 249, 249);
+    width: 30rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    box-shadow: 0px 5px 8px #000;
+    border-radius: 5px;
+}
+.touristPlacename, .touristPlaceLocation, .view_Placeprofile{
+    font-family: 'Bree Serif', serif;
+}
+.view_Placeprofile{
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 2px;
+   /* background: rgb(88, 214, 141);*/
+    background: #51AFC3;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px #000;
+    margin: 4px;
+    width: 5rem;
+    text-align: center;
+
+}
+.view_Placeprofile:hover{
+    box-shadow: 0 2px 3px #000;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,400i,500,500i,600,600i,700i,800');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+*,
+*::after,
+*::before  {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+body {
+    box-sizing: border-box;
+    line-height: 1.4;
+    font-size: 1.5rem;
+    margin: 0;
+}

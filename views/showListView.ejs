@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+
+<% talentlist.forEach(function(talentlist){%>
+  <ul class="profilelist">
+
+
+  <li class="profilelist-container">
+                  <div class="profilelist-container-imgcontainer">
+                      <img src="<%= talentlist.thumbnail %>" alt="User Images" class="profilelist-container-imgcontainer__img">
+                  </div>
+                  <div class="profilelist-container-detailscontainer">
+                      <h2><%= talentlist.username %></h2>
+                      <h3></h3>
+                      <h3></h3>
+                      <a href="/showTalent/<%= talentlist._id %>" class="viewProfile">view Profile</a>
+                  </div>
+              </li>
+
+              </ul>
+<% }); %>
+
+<% include partials/footer %>

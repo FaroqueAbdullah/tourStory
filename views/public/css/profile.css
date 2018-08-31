@@ -1,0 +1,201 @@
+.profile-body{
+
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url("../img/eberhard-grossgasteiger-382452-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+@media all and (max-width: 880px){
+    .profile-body-1{
+        flex-direction: column;
+        height: 100%;
+
+
+    }
+    .image-section{
+        width: 100%;
+    }
+    .visited-list-section{
+        width: 100%;
+    }
+
+}
+.profile-body-1{
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 7.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    height: 60vh;
+}
+
+.image-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background: rgba(244, 246, 247,.5);
+    height: 100%;
+    padding: 5px;
+    border-radius: 5px;
+}
+.outline{
+   border: 5px solid #51AFC3;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9rem;
+    width: 9rem;
+
+}
+.profile-img{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+
+
+}
+.visited-list-section{
+    width: 70%;
+    margin: 5px;
+    height: 100%;
+}
+.visited-list-headline{
+    background: rgba(244, 246, 247,.5);
+    width: 100%;
+    margin-bottom: 2px;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.visited-list-headline-text{
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+.visited-list{
+    overflow: scroll;
+    height: 85%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+
+    background: rgba(244, 246, 247,.5);
+}
+.visited-list-item{
+    width: 70%;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(234, 237, 237,.5);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    margin-top: 1rem;
+
+}
+.map-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    margin: 5px;
+
+
+}
+.google-map{
+    height: 80%;
+}
+.map-section-heading{
+    background: rgba(244, 246, 247,.5);
+    width: 98%;
+    margin: 5px 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.heading-text{
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.blog-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30rem;
+    width: 70%;
+    background: rgba(244, 246, 247,.5);
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 5px;
+
+}
+.blog-section-part1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+.blog-section-part2{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog-img{
+    height: 20rem;
+    width: 30rem;
+    box-shadow: 0 5px 10px #000;
+    border-radius: 5px;
+
+}
+.read-blog{
+    margin-top: 2rem;
+    text-decoration: none;
+    background:  rgba(63, 155, 124,.5);
+    padding: 3px;
+    width: 10rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px #000;
+    color: aliceblue;
+    font-family: 'Bree Serif', serif;
+}
+.read-blog:hover{
+    background: rgb(63, 155, 124);
+    box-shadow: 0 2px 10px #000;
+
+}
+.read-blog:active{
+    transform: translateY(2px);
+}
+.profile-name,.location,.visitedarea,.blog-title,.blog-location{
+    font-family: 'Bree Serif', serif;
+}
