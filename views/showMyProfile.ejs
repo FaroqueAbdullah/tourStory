@@ -18,7 +18,7 @@
                 </div>
                 <div class="visited-list-section">
                     <div class="visited-list-headline">
-                        <h1 class="visited-list-headline-text">list of place visited by <span><%= locals.users.username %></span></h1>
+                        <h1 class="visited-list-headline-text">list of places visited by <span><%= locals.users.username %></span></h1>
                     </div>
 
                     <ul class="visited-list">
@@ -53,7 +53,7 @@
         <script type="text/javascript">
 
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 3,
+            zoom: 2,
             center: new google.maps.LatLng(0, 0),
             mapTypeId: google.maps.MapTypeId.ROADMAP
           });
@@ -75,7 +75,6 @@
               }
             })(marker, i));
            <% }); %>
-
         </script>
 
 
