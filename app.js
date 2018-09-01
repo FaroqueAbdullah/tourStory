@@ -6,13 +6,12 @@ const methodOverride           = require("method-override");
 const mongoose                 = require('mongoose');
 
 
-
+const createRoutes             = require('./routes/create-routes') ;
 const authRoutes               = require('./routes/auth-routes');
 const showProfile              = require('./routes/profile-routes');
 const indexRoutes              = require('./routes/index-routes');
 const searchRoutes             = require('./routes/search-routes');
 const touristProfileRoutes     = require('./routes/touristProfile-routes');
-const tourPlaceRoutes          = require('./routes/tourPlace-routes');
 const myProfileRoutes          = require('./routes/myProfile-routes');
 const addNewVisitedPlace       = require('./routes/addNewVisitedPlace-routes');
 
@@ -62,13 +61,13 @@ app.use('/profile', touristProfileRoutes);
 app.use('/addNewVisitedPlace' ,addNewVisitedPlace  )
 app.use(indexRoutes);
 app.use(searchRoutes);
-app.use(tourPlaceRoutes);
 app.use(myProfileRoutes);
 app.use(showProfile);
+app.use(createRoutes);
 
 // create home route
 app.get('/', (req, res) => {
-    res.render('home', {user: req.user});
+    res.redirect('/home');
 });
 
 

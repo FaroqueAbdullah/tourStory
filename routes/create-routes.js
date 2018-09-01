@@ -2,7 +2,13 @@ const router = require('express').Router();
 var NodeGeocoder = require('node-geocoder');
 const Blog = require('../models/touristBlog-model');
 const TourPlace = require('../models/tourPlace-model');
+const NewEvent = require('../models/newEvent-model');
 const VisitedPlace = require('../models/visitedPlace-model');
+
+const bodyParser = require("body-parser");
+
+
+var bodyParserencoded = bodyParser.urlencoded({extended:false});
 
 var options = {
   provider: 'google',
@@ -15,56 +21,44 @@ var geocoder = NodeGeocoder(options);
 
 
 router.post("/createBlog", bodyParserencoded ,function(req, res){
-  var newvalues = { $set: { blogTitle : req.body.blogTitle,
+  var newvalues = {  blogTitle : req.body.blogTitle,
                             blogLocation : req.body.blogLocation,
+                            blogthumbnil : req.body.blogthumbnil,
                             blogDescription : req.body.blogDescription,
                             blogAuthorId : req.user._id,
                             blogAuthorName : req.user.username,
                             blogAuthorThumbnil : req.user.thumbnail,
-                            } };
+                             };
   Blog.create( newvalues , function(err, updatedInformation){
     if(err)
     {
       throw err;
     }else {
-      res.render("profile",{user: req.user});
+      res.render("home",{user: req.user});
       //res.redirect("/myprofile/" + req.user.id);
     }
   });
 });
 
 
-router.post("/createTourPlace", bodyParserencoded ,function(req, res){
-  var newvalues = { $set: { placeName : req.body.placeName,
-                            placeLocation : req.body.placeLocation,
-                            placeDescription : req.body.placeDescription
-                            } };
-  TourPlace.create( newvalues , function(err, updatedInformation){
-    if(err)
-    {
-      throw err;
-    }else {
-      res.render("profile",{user: req.user});
-      //res.redirect("/myprofile/" + req.user.id);
-    }
-  });
-})
+
 
 router.post("/createEvent", bodyParserencoded ,function(req, res){
-  var newvalues = { $set: { eventTitle : req.body.eventTitle,
+  var newvalues = {  eventTitle : req.body.eventTitle,
                             eventLocation : req.body.eventLocation,
-                            eventDescription : req.body.eventDescription,
+                            eventDate : req.body.eventDate,
+                            eventDuration : req.body.eventDuration,
+                            eventEmail : req.body.eventEmail,
                             blogAuthorId : req.user._id,
                             blogAuthorName : req.user.username,
-                            blogAuthorThumbnil : req.user.thumbnail,
-                            email : req.body.email
-                            } };
-  Blog.create( newvalues , function(err, updatedInformation){
+                            blogAuthorThumbnil : req.user.thumbnail
+                            };
+  NewEvent.create( newvalues , function(err, updatedInformation){
     if(err)
     {
       throw err;
     }else {
-      res.render("profile",{user: req.user});
+      res.render("home",{user: req.user});
       //res.redirect("/myprofile/" + req.user.id);
     }
   });

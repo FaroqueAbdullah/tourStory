@@ -20,3 +20,6 @@ body {
     font-size: 1.5rem;
     margin: 0;
 }
+.shadow{
+  border-bottom: 2px solid black;
+}

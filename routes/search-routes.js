@@ -3,7 +3,7 @@ var express = require("express"),
     mongoose = require("mongoose");
 
 var User = require("../models/user-model");
-var TourPlace = require('../models/tourPlace-model');
+var Blog = require('../models/touristBlog-model');
 
 
 
@@ -14,11 +14,11 @@ function escapeRegex(text) {
 router.get("/searchTouristProfile", function(req, res) {
     if (req.query.search) {
        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
-       User.find({ username: regex }, function(err, talentlist) {
+       User.find({ username: regex }, function(err, tourist) {
            if(err) {
                console.log(err);
            } else {
-              res.render("showListView",{user:req.user ,talentlist:talentlist});
+              res.render("tourist",{user:req.user ,tourist:tourist});
            }
        });
     }
@@ -28,11 +28,11 @@ router.get("/searchTouristProfile", function(req, res) {
 router.get("/searchTourPlace", function(req, res) {
     if (req.query.search) {
        const regex = new RegExp(escapeRegex(req.query.search), 'gi');
-       TourPlace.find({ placeName: regex }, function(err, talentlist) {
+       Blog.find({ blogLocation: regex }, function(err, tourplace) {
            if(err) {
                console.log(err);
            } else {
-              res.render("showListView",{user:req.user ,talentlist:talentlist});
+              res.render("tourplace",{user:req.user ,tourplace:tourplace});
            }
        });
     }

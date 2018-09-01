@@ -1,5 +1,19 @@
 <% include partials/header %>
 
+<main class="blog-body">
+       <div class="blogPart-1">
+           <img src="<%= blog.blogthumbnil %>" alt="Blog Post Image" class="blog-post-img">
+       </div>
+       <div class="blog-post-user">
+          <a href="#" class="blog-post-user-box-img">
+              <img src="<%= blog.blogAuthorThumbnil %>" alt="User Image" class="blog-post-user-img">
+          </a>
+          <a href="#" class="blog-post-user-name"><%= blog.blogAuthorName %></a>
+       </div>
+       <h2 class="bolg-post-title">Title: <span><%= blog.blogTitle %></span></h2>
+       <div class="bolg-post-desc"><%= blog.blogDescription %></div>
+   </main>
+
 
 
 <% include partials/footer %>

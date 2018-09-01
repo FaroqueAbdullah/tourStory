@@ -7,7 +7,6 @@ const blogSchema = new Schema({
     blogthumbnil : String,
     blogDescription : String,
     blogAuthorId : String,
-    blogAuthor : String,
     blogAuthorName : String,
     blogAuthorThumbnil : String
 });

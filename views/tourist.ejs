@@ -4,25 +4,27 @@
             <div class="tourist-part1">
                 <ul class="tiny-nav">
                     <li class="tiny-nav-item"><a href="/" class="tiny-nav-item-text">home</a></li>
-                    <li class="tiny-nav-item"><a href="/touristsearchpage" class="tiny-nav-item-text">tourist</a></li>
+                    <li class="tiny-nav-item shadow"><a href="/touristsearchpage" class="tiny-nav-item-text">tourist</a></li>
                     <li class="tiny-nav-item"><a href="/tourplacesearchpage" class="tiny-nav-item-text">tour place</a></li>
                 </ul>
-                <form action="#" class="search-tourist">
-                    <input type="text" name="search-tourist" placeholder="Search Tourist" class="search-tourist-input">
+                <form action="/searchTouristProfile" class="search-tourist" method="GET">
+                    <input type="text" name="search" placeholder="Search Tourist" class="search-tourist-input">
                     <input type="submit" value="Go" class="search_submit">
                 </form>
             </div>
             <div class="listOfTourist">
                 <div class="listOfTourist-heading"><h2 class="listOfTourist-heading-text">List Of Tourist</h2></div>
                 <div class="touristList">
+                  <% tourist.forEach(function(tourist){%>
                     <div class="separateTouristBlock">
                         <div class="img-outline">
-                            <img src="../views/public/img/trump.jpg" alt="User Photo" class="tourist-image">
+                            <img src="<%= tourist.thumbnail %>" alt="User Photo" class="tourist-image">
                         </div>
-                        <h3 class="touristname">Faroque abdullah</h3>
+                        <h3 class="touristname"><%= tourist.username %></h3>
                         <h4 class="touristLocation">Bangladesh</h4>
-                        <a href="#" class="view_profile">View</a>
+                        <a href="/showProfile/<%= tourist.id %>" class="view_profile">View</a>
                     </div>
+                    <% }); %>
                 </div>
             </div>
         </main>

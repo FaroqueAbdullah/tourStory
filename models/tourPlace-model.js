@@ -4,8 +4,9 @@ const Schema = mongoose.Schema;
 const tourplaceSchema = new Schema({
     placeName : String,
     placeLocation : String,
-    placeDescription : String,
-    placeImage : String
+    placeImage : String,
+    placeDescription : String
+
 });
 
 const TourPlace = mongoose.model('tourplace', tourplaceSchema);

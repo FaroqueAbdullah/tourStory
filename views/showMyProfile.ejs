@@ -31,16 +31,18 @@
                 <div class="map-section-heading"> <h2 class="heading-text">Foot print</h2></div>
                     <div id="map" style="width: 100%; height: 420px;"></div>
             </div>
+            <% locals.blogs.forEach(function(blogs){%>
             <div class="blog-section">
                 <div class="blog-section-part1">
-                    <div class="blog-title"><h2 class="blog-title-text">Title: <span>Visiting Tagmahal</span></h2></div>
-                    <div class="blog-location"><h4 class="blog-location-text">location: <span>Tajmahal</span></h4></div>
-                    <a href="#" class="read-blog">Read</a>
+                    <div class="blog-title"><h2 class="blog-title-text">Title: <span><%= blogs.blogTitle %></span></h2></div>
+                    <div class="blog-location"><h4 class="blog-location-text">location: <span><%= blogs.blogLocation %></span></h4></div>
+                    <a href="/readBlog/<%= blogs.id %>" class="read-blog">Read</a>
                 </div>
                 <div class="blog-section-part2">
-                    <img src="/public/img/photographer1.jpg" alt="" class="blog-img">
+                    <img src="<%= blogs.blogthumbnil %>" alt="tour image" class="blog-img">
                 </div>
             </div>
+            <% }); %>
 
         </main>
 
@@ -70,7 +72,7 @@
                 infowindow.open(map, marker);
               }
             })(marker, i));
-           }); 
+           });
 
         </script>
 

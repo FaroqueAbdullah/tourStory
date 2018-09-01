@@ -6,24 +6,25 @@
                 <ul class="tiny-nav">
                     <li class="tiny-nav-item"><a href="/" class="tiny-nav-item-text">home</a></li>
                     <li class="tiny-nav-item"><a href="/touristsearchpage" class="tiny-nav-item-text">tourist</a></li>
-                    <li class="tiny-nav-item"><a href="/tourplacesearchpage" class="tiny-nav-item-text">tour place</a></li>
+                    <li class="tiny-nav-item shadow"><a href="/tourplacesearchpage" class="tiny-nav-item-text">tour place</a></li>
                 </ul>
-                <form action="#" class="search-touristPlace">
-                    <input type="text" name="search-tourist" placeholder="Search Tourist Places" class="search-touristPlace-input">
+                <form action="/searchTourPlace" class="search-touristPlace" method="GET">
+                    <input type="text" name="search" placeholder="Search Tourist Places" class="search-touristPlace-input">
                     <input type="submit" value="Go" class="searchPlace_submit">
                 </form>
             </div>
             <div class="listOfTourist">
                 <div class="listOfTourist-heading"><h2 class="listOfTourist-heading-text">List Of Places</h2></div>
                 <div class="touristList">
+                  <% tourplace.forEach(function(tourplace){%>
                     <div class="separateTouristPlaceBlock">
                         <div class="img-outline">
-                            <img src="../views/public/img/eberhard-grossgasteiger-382452-unsplash.jpg" alt="User Photo" class="touristPlace-image">
+                            <img src="<%= tourplace.blogthumbnil %>" alt="User Photo" class="touristPlace-image">
                         </div>
-                        <h3 class="touristPlacename">Khirgonga</h3>
-                        <h4 class="touristPlaceLocation">India</h4>
-                        <a href="#" class="view_Placeprofile">View</a>
+                        <h3 class="touristPlacename"><%= tourplace.blogLocation %></h3>
+                        <a href="/readBlog/<%= tourplace.id %>" class="view_Placeprofile">View</a>
                     </div>
+                    <% }); %>
                 </div>
             </div>
         </main>

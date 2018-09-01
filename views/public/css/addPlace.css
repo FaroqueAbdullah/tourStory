@@ -4,10 +4,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
 }
 .visitedPlace-dolist-form{
     position: absolute;
-
+    
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -15,9 +17,32 @@
     width: 30%;
     height: 50vh;
     border-radius: 5px;
+    
+    
 
 
-
+}
+.blog-dolist-form, .eventCreate-dolist-form{
+    position: absolute;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 30%;
+    height: 50vh;
+    border-radius: 5px;
+}
+.addTourPlace-dolist-form{
+    position: absolute;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 30%;
+    height: 50vh;
+    border-radius: 5px;
 }
 
 .input_placename{
@@ -25,12 +50,39 @@
     height: 3rem;
     border-radius: 5px;
     margin: 5px;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+       
+}
+.desc{
+    height: 10rem;
+    width: 90%;
+    border-radius: 5px;
+    margin: 5px;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+}
+.input_blog{
+    width: 90%;
+    height: 3rem;
+    border-radius: 5px;
+    margin: 5px;
+    padding-left: 5px;
     border: none;
     outline: none;
 }
 .form-headline{
     margin-top: -5rem;
     margin-bottom: 8rem;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+.blogform-headline{
+    
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
@@ -44,6 +96,7 @@
     border-radius: 5px;
     margin-top: 5rem;
     outline: none;
+    font-family: 'Montserrat', sans-serif;
 
 }
 .input_submit:hover{

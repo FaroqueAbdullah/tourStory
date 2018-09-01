@@ -1,5 +1,15 @@
 <% include partials/header %>
 
-
+<div class="visitedPlace-dolist">
+            <img src="/public/img/img1.jpg" alt="" class="form-bg">
+            <form action="/createBlog" class="blog-dolist-form" method="POST">
+                <h2 class="blogform-headline">Add New Blog</h2>
+                <input type="text" name="blogTitle" class="input_blog" placeholder="Blog Title">
+                <input type="text" name="blogLocation" class="input_blog" placeholder="Location">
+                <input type="url" name="blogthumbnil" class="input_blog" placeholder="Image URL">
+                <input type="text" name="blogDescription" class="desc" placeholder="Description">
+                <input type="submit" value="Submit" class="input_submit">
+            </form>
+        </div>
 
 <% include partials/footer %>

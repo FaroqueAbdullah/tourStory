@@ -1,5 +1,20 @@
 <% include partials/header %>
 
 
+<div class="visitedPlace-dolist">
+            <img src="/public/img/img1.jpg" alt="" class="form-bg">
+            <form action="/createEvent" class="eventCreate-dolist-form" method="POST">
+                <h2 class="blogform-headline">Create New Event</h2>
+                <input type="text" name="eventTitle" class="input_blog" placeholder="Event Title">
+                <input type="text" name="eventLocation" class="input_blog" placeholder="Event Location">
+                <input type="text" name="eventDate" class="input_blog" placeholder="Event Date">
+                <input type="text" name="eventDuration" class="input_blog" placeholder="Event Duration">
+                <input type="email" name="eventEmail" class="input_blog" placeholder="Your E-Mail">
+                <input type="submit" value="Submit" class="input_submit">
+            </form>
+        </div>
+
+
+
 
 <% include partials/footer %>

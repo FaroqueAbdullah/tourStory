@@ -4,7 +4,7 @@
         <main class="tourist-body">
             <div class="home-part1">
                 <ul class="tiny-nav">
-                    <li class="tiny-nav-item"><a href="/" class="tiny-nav-item-text">home</a></li>
+                    <li class="tiny-nav-item shadow"><a href="/" class="tiny-nav-item-text">home</a></li>
                     <li class="tiny-nav-item"><a href="/touristsearchpage" class="tiny-nav-item-text">tourist</a></li>
                     <li class="tiny-nav-item"><a href="/tourplacesearchpage" class="tiny-nav-item-text">tour place</a></li>
                 </ul>
@@ -16,28 +16,31 @@
             <div class="listOfEvents">
                 <div class="listOfEvents-heading"><h2 class="listOfTourist-heading-text">All Events</h2></div>
                 <div class="eventsList">
+                  <% locals.events.forEach(function(events){%>
                     <div class="separateEventsBlock">
-                        <h2 class="eventsTitle">Lets Go Kasol</h2>
-                        <h3 class="eventsLocation">Kasol</h3>
-                        <h4 class="eventsElements">September 04 2018</h4>
-                        <h4 class="eventsDuration">Duration: <span>10 Days</span></h4>
-                        <h5 class="eventsMail">pathharatareq@gmail.com</h5>
-
+                        <h2 class="eventsTitle"><%= events.eventTitle %></h2>
+                        <h3 class="eventsLocation"><%= events.eventLocation %></h3>
+                        <h4 class="eventsElements"><%= events.eventDate %></h4>
+                        <h4 class="eventsDuration">Duration: <span><%= events.eventDuration %></span></h4>
+                        <h5 class="eventsMail"><%= events.eventEmail %></h5>
                     </div>
+                    <% }); %>
                 </div>
             </div>
 
             <div class="listOfTopBlogs">
                     <div class="listOfTopBlogs-heading"><h2 class="listOfTourist-heading-text">Top Blogs</h2></div>
                     <div class="blogList">
+                    <% locals.blogs.forEach(function(blogs){%>
                         <div class="separateBlogBlock">
                             <div class="imgBlog-outline">
-                                <img src="../views/public/img/eberhard-grossgasteiger-382452-unsplash.jpg" alt="User Photo" class="blog-image">
+                                <img src="<%= blogs.blogthumbnil %>" alt="User Photo" class="blog-image">
                             </div>
-                            <h3 class="touristPlacename">Story about Khirgonga</h3>
-                            <h4 class="touristPlaceLocation">India</h4>
-                            <a href="#" class="view_Placeprofile">Read</a>
+                            <h3 class="touristPlacename"><%= blogs.blogLocation %></h3>
+                            <h4 class="touristPlaceLocation"><%= blogs.blogTitle %></h4>
+                            <a href="/readBlog/<%= blogs.id %>" class="view_Placeprofile">Read</a>
                         </div>
+                        <% }); %>
                     </div>
                 </div>
         </main>

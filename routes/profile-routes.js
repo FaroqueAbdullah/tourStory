@@ -2,6 +2,7 @@ const router = require('express').Router();
 const passport = require('passport');
 const VisitedPlace = require('../models/visitedPlace-model');
 const User = require("../models/user-model");
+const Blog = require('../models/touristBlog-model');
 const async = require('async');
 
 
@@ -34,7 +35,15 @@ router.get('/showProfile/:id', function(req, res, next) {
                 locals.locations = locations;
                 callback();
             })
-          }
+          },
+
+          function(callback) {
+            Blog.find({ blogAuthorId:req.params.id }, function(err, blogs){
+              if (err) return callback(err);
+              locals.blogs = blogs;
+              callback();
+          })
+        }
         ];
 
         async.parallel(tasks, function(err) { //This function gets called after the two tasks have called their "task callbacks"
