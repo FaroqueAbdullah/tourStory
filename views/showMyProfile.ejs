@@ -2,7 +2,9 @@
 
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD885iD0qNSuvFPeGvysKiQYnXefrY-6vE&callback=initMap" type="text/javascript"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"
+          type="text/javascript"></script>
+
 
         <body>
         <main class="profile-body">
@@ -51,7 +53,7 @@
         <script type="text/javascript">
 
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
+            zoom: 3,
             center: new google.maps.LatLng(0, 0),
             mapTypeId: google.maps.MapTypeId.ROADMAP
           });
@@ -60,19 +62,19 @@
 
           var marker, i;
 
-          locals.locations.forEach(function(locations){
+          <% locals.locations.forEach(function(locations){ %>
             marker = new google.maps.Marker({
-              position: new google.maps.LatLng(locals.locations.lat , locals.locations.lng),
+              position: new google.maps.LatLng(<%= locations.lat %>,<%= locations.lng %>),
               map: map
             });
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
               return function() {
-                infowindow.setContent(locals.locations.location);
+                infowindow.setContent(locations.location);
                 infowindow.open(map, marker);
               }
             })(marker, i));
-           });
+           <% }); %>
 
         </script>
 
