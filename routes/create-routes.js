@@ -34,7 +34,7 @@ router.post("/createBlog", bodyParserencoded ,function(req, res){
     {
       throw err;
     }else {
-      res.render("home",{user: req.user});
+      res.redirect("/home");
       //res.redirect("/myprofile/" + req.user.id);
     }
   });
@@ -58,7 +58,7 @@ router.post("/createEvent", bodyParserencoded ,function(req, res){
     {
       throw err;
     }else {
-      res.render("home",{user: req.user});
+      res.redirect("/home");
       //res.redirect("/myprofile/" + req.user.id);
     }
   });

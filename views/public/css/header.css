@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    
     background: #348F50;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -11,7 +11,8 @@
     height: 7rem;
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: 10;
+    transition: all .2s ease-in-out;
 }
 .loginPanel-box{
     width: 5rem;
@@ -20,7 +21,7 @@
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-
+   
 }
 .dropdown-list{
     position: absolute;
@@ -28,26 +29,26 @@
     display: none;
     z-index: 5;
     list-style: none;
-
+    
     right: 10%;
 
-
+    
 }
 .dropdown-list .dropdown-item{
-    background: #E6DADA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
     padding: 1rem;
-    margin: .5rem;
+    margin-bottom: .2rem;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(248, 249, 249,.5);
 }
 .dropdown-list .dropdown-item a{
     text-decoration: none;
-    color: aliceblue;
-    text-align: center;
-
+    color: rgb(20, 90, 50);
+    
+    font-family: 'Bree Serif', serif;
+    
 }
 .loggedIn{
     position: relative;
