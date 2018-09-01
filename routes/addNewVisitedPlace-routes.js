@@ -31,7 +31,7 @@ var touristId = req.user._id;
         } else {
             //redirect back to campgrounds page
             console.log(newlyCreated);
-            res.redirect("/showMyProfile");
+            res.redirect("/showProfile/<%= user._id %>");
         }
     });
   });
