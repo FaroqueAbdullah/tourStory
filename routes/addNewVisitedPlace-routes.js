@@ -28,10 +28,11 @@ var touristId = req.user._id;
     VisitedPlace.create(newCampground, function(err, newlyCreated){
         if(err){
             console.log(err);
+            res.redirect("/showMyProfile")
         } else {
             //redirect back to campgrounds page
             console.log(newlyCreated);
-            res.redirect("/showProfile/<%= user._id %>");
+            res.redirect("/showMyProfile");
         }
     });
   });
