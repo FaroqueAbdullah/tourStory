@@ -37,7 +37,7 @@ router.post("/createBlog", bodyParserencoded ,function(req, res){
       res.redirect("/home");
       //res.redirect("/myprofile/" + req.user.id);
     }
-  });
+  })
 });
 
 

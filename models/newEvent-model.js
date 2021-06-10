@@ -11,7 +11,13 @@ const eventSchema = new Schema({
     blogAuthor : String,
     blogAuthorName : String,
     blogAuthorThumbnil : String
-});
+}, {
+    writeConcern: {
+      w: 'majority',
+      j: true,
+      wtimeout: 1000
+    }
+  });
 
 const NewEvent = mongoose.model('newevent', eventSchema);
 

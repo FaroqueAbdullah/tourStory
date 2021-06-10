@@ -4,8 +4,8 @@ module.exports = {
     clientSecret : 'C2lpPDu-TvdfFFsx4Br3R1Xv'
   },
 
-  mongodb: {
-    dbURI : 'mongodb://abir:abir123@ds239412.mlab.com:39412/travelstory'
+  mongodb: { 
+    dbURI : 'mongodb+srv://tourStory:tourStory@cluster0.guukw.mongodb.net/myFirstDatabase?retryWrites=true'
   },
 
   session:{

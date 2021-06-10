@@ -53,6 +53,8 @@ app.use(passport.session());
 // connect to mongodb
 mongoose.connect(keys.mongodb.dbURI, () => {
     console.log('connected to mongodb');
+}).catch((err) => {
+    console.log("Not Connected to Database ERROR! ", err);
 });
 
 // set up routes
